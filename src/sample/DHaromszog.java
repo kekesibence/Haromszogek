@@ -14,6 +14,9 @@ public class DHaromszog {
         this.setaOldal(Double.parseDouble(adatok[0]));
         this.setbOldal(Double.parseDouble(adatok[1]));
         this.setcOldal(Double.parseDouble(adatok[2]));
+        EllNovekvoSorrend();
+        EllMegszerkesztheto();
+        EllDerekszogu();
     }
 
     public double getaOldal() {
@@ -30,14 +33,14 @@ public class DHaromszog {
         if (aOldal > 0) {
             this.aOldal = aOldal;
         } else {
-            throw new Exception("A(z) 'a' oldal nem lehet nulla vagy negatív szám");
+            throw new Exception(String.format("%d. sor: A(z) 'a' oldal nem lehet nulla vagy negatív szám", sorSzama));
         }
     }
     public void setbOldal(double bOldal) throws Exception {
         if (aOldal > 0) {
             this.bOldal = bOldal;
         } else {
-            throw new Exception("A(z) 'b' oldal nem lehet nulla vagy negatív szám");
+            throw new Exception(String.format("%d. sor: A(z) 'b' oldal nem lehet nulla vagy negatív szám", sorSzama));
         }
 
     }
@@ -45,7 +48,7 @@ public class DHaromszog {
         if (cOldal > 0) {
             this.cOldal = cOldal;
         } else {
-            throw new Exception("A(z) 'c' oldal nem lehet nulla vagy negatív szám");
+            throw new Exception(String.format("%d. sor: A(z) 'c' oldal nem lehet nulla vagy negatív szám", sorSzama));
         }
 
     }
